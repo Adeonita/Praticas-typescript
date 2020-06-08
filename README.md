@@ -1,2 +1,2 @@
 # Praticas-typescript
-praticas de typescript 
+Repositório para praticas de typescript 
