@@ -84,3 +84,23 @@ const pessoa = ['Adeonita', 1996];
 //const anoNascimento = pessoa[1]
 const [nomeExemplo, anoNascimento] = pessoa; //É uma sintaxe simplificada para o que foi escrito acima
 console.log(nomeExemplo, anoNascimento);
+//destructuring (objeto) 
+const item = {
+    nome: 'tv',
+    preco: 500
+};
+//const nomeItem = item.nome
+//const precoItem = item.preco
+const { nome: n, preco } = item; //A sintaxe acima pode ser resumida ao utilizar o operador de destructuring para objeto
+console.log(n, preco);
+//Removendo caracteristicas aninhadas
+const product = {
+    Produto1: {
+        descricao: 'Produto1'
+    },
+    Produto2: {
+        descricao: 'Produto2'
+    }
+};
+const { Produto1: { descricao } } = product;
+console.log(descricao);
