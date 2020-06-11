@@ -1,11 +1,11 @@
 "use strict";
 //string
-var nome = 'Esse é um texto de teste, vou salvar e testar';
+let nome = 'Esse é um texto de teste, vou salvar e testar';
 console.log(nome);
 //number
-var idade = 27;
+let idade = 27;
 //tuplas
-var endereco = ['Alameda das Pedreiras', 8];
+let endereco = ['Alameda das Pedreiras', 8];
 console.log(endereco);
 //enums
 var Cor;
@@ -16,7 +16,7 @@ var Cor;
 })(Cor || (Cor = {}));
 console.log(Cor.Cinza);
 //any
-var carro = 'fusca';
+let carro = 'fusca';
 console.log(carro);
 carro = {
     marca: 'Fusca',
@@ -32,11 +32,11 @@ function multiplicar(numA, numB) {
 }
 console.log(multiplicar(2, 2));
 //tipar uma funcao
-var calculo;
+let calculo;
 calculo = multiplicar;
 console.log(multiplicar(5, 6));
 //objetos
-var usuario = {
+let usuario = {
     nome: "Ade",
     idade: 23
 };

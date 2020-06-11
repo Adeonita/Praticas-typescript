@@ -1,3 +1,3 @@
 "use strict";
-var a = 'Atualize !';
+const a = 'Atualize !';
 console.log(a);

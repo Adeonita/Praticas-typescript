@@ -1,6 +1,6 @@
 "use strict";
-var canal = 'Gaveta';
-var inscritos = 123;
+let canal = 'Gaveta';
+let inscritos = 123;
 //canal = inscritos;
 console.log(canal);
 //noImplicitAny
@@ -8,7 +8,7 @@ function soma(a, b) {
     return a + b;
 }
 function saudar(isManha) {
-    var saudacao;
+    let saudacao;
     if (isManha) {
         saudacao = 'Bom dia!';
     }

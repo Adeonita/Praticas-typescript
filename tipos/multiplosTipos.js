@@ -1,11 +1,11 @@
 "use strict";
 //Recebendo mais de um tipo numa variavel
 //Desta forma nota pode ser do tipo numvber ou string
-var nota;
+let nota;
 nota = 10;
-console.log("Minha nota \u00E9 " + nota + "!");
+console.log(`Minha nota é ${nota}!`);
 //checando tipos
-var valor = 30;
+let valor = 30;
 if (typeof valor === 'number') {
     console.log('é number');
 }
@@ -17,10 +17,10 @@ else {
 function falha(msg) {
     throw new Error(msg);
 }
-var produto = {
+const produto = {
     nome: 'Sabão',
     preco: 1,
-    validarProduto: function () {
+    validarProduto() {
         if (!this.nome || this.nome.trim().length == 0) {
             falha('O nome não pode ser nulo');
         }
@@ -30,10 +30,10 @@ var produto = {
     }
 };
 produto.validarProduto();
-var alturaOpcional;
+let alturaOpcional;
 alturaOpcional = null;
 console.log(alturaOpcional);
-var contato1 = {
+const contato1 = {
     nome: 'Fulano',
     tel1: '71123456',
     tel2: null
