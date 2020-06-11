@@ -58,3 +58,29 @@ console.log(Math.max(...numbers)); //três pontos (...) sendo utilizado como ope
 const turmaA = ['João', 'Maria', 'Fernanda']; //(...) sendo utiizado como operador de junção
 const turmaB = ['Miguel', 'Lorena', ...turmaA]; //Une os elementos e passa como parâmetro para o array turmaB
 console.log(turmaB);
+function retornaArray(...args) {
+    return args;
+}
+console.log(retornaArray(1, 2, 3, 4, 5, 6));
+//spread  (tuplas)
+const tupla = [1, 'teste', false]; //Os valores estão agrupados como array
+/*A função espera receber os parâmetros separados, então na chamada da função
+faz-se necessário passar o operador de espalhamento*/
+function tuplaParams(a, b, c) {
+    console.log(`1) ${a}, ${b}, ${c}`);
+}
+tuplaParams(...tupla); //spread
+/*Neste caso ele espera receber os params espalhados como um array
+também chamo a função de maneira espalhada, pois ele espera receber parâmetros quebrados
+*/
+function tuplaparams2(...params) {
+    console.log(`2) ${params[1]}`);
+}
+tuplaparams2(...tupla); //spread
+//destructuring (array) 
+//Serve para quebrar um array de maneira mais simples
+const pessoa = ['Adeonita', 1996];
+//const nomeExemplo = pessoa[0]
+//const anoNascimento = pessoa[1]
+const [nomeExemplo, anoNascimento] = pessoa; //É uma sintaxe simplificada para o que foi escrito acima
+console.log(nomeExemplo, anoNascimento);
