@@ -13,13 +13,13 @@ var baterPonto = function (horario) {
         return 'Fora do horário!';
     }
 };
-var funcionario = {
+let funcionario = {
     supervisores: ['supervisor1', 'supervisor2', 'supervisor3'],
-    baterPonto: baterPonto
+    baterPonto
 };
-var funcionario2 = {
+let funcionario2 = {
     supervisores: ['supervisor4'],
-    baterPonto: baterPonto
+    baterPonto
 };
 console.log(funcionario.supervisores);
 console.log(funcionario.baterPonto(8));

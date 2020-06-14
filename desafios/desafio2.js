@@ -1,11 +1,11 @@
 "use strict";
-var contaBancaria = {
+let contaBancaria = {
     saldo: 500,
-    depositar: function (valor) {
+    depositar(valor) {
         this.saldo = this.saldo + valor;
     }
 };
-var correntista = {
+let correntista = {
     nome: 'Ana Silva',
     contaBancaria: contaBancaria,
     contatos: ['34567890', '98765432']

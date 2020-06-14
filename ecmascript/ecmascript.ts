@@ -98,6 +98,7 @@ function tuplaparams2(...params: [number, string, boolean]) {
 tuplaparams2(...tupla)//spread
 
 
+
 //destructuring (array) 
 //Serve para quebrar um array de maneira mais simples
 const pessoa = ['Adeonita', 1996]
@@ -134,3 +135,51 @@ console.log(n, preco)
 
     const {Produto1: {descricao}} = product
     console.log(descricao)
+
+
+//Promisses
+
+//com callback
+//function esperar3s(){
+    /*SetTimeOut recebe uma funço como parâmetro e um tempo em ms
+        passado o tempo estabelecido a função é chamada 
+    */
+//    setTimeout(() => {console.log('Sem promisse')}, 1000)
+//}
+
+
+//esperar3s()
+
+/*com promisse
+Essa função retorna uma promisse que recebe como parâmetro a funcao resolve
+que é chamada caso a promessa seja concluída com sucesso
+caso contrário é chamado o método reject
+
+function esperarPromisse(){
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve('Com promisse')
+        }, 1000)
+        }
+    )
+}
+
+esperarPromisse()
+    .then(dado => console.log(dado))
+
+*/
+
+//usando fetch
+console.log('****SWAPI****')
+fetch('https://swapi.dev/api/people/1/')
+    .then(res => res.json())
+    .then(personagem => {
+        console.log(`Personagem: ${personagem.name}`)
+        console.log('Filmes: ')
+        for(let value of personagem.films){
+            fetch(value)
+                .then(filme => filme.json())
+                .then(title => console.log(`    ${title.title}`))        
+        }
+}).catch(err => console.log(`Error: ${err}`)) //O catch representa o erro da promisse 
+   
